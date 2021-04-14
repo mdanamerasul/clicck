@@ -1,0 +1,207 @@
+/* Styles that are common between all "optional" containers, can be changed in one place */
+div#header-custom-2,
+/*div#header-custom-3,*/
+/*div#customer-info-header,
+div#customer-info-footer,*/
+/*div#billing-info-header,*/
+/*div#billing-info-footer,*/
+/*div#shipping-info-header,
+div#shipping-info-footer,*/
+/*div#order-summary-header,*/
+/*div#order-summary-footer,
+div#recommended-for-you-header,
+div#recommended-for-you-footer,*/
+/*div#pay-now-header,
+div#pay-now-footer,
+div#security-logos-header,
+div#security-logos-footer,
+div#custom-footer,
+div#custom-footer-2,
+div#custom-footer-3,
+div#custom-footer-4,
+div#custom-footer-5,*/
+/*div#footer-image {
+    display: block;
+    min-height: 40px;
+    margin: 5px 0 5px 0;
+
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+*/
+/* 
+   Since the application is responsive by design, the styling changes at various breakpoints (browser widths).  The
+   following @media queries update the css in each container for the device requesting the orderform.  This improves
+   performance by only having a device request the image sizes it needs, and allows for font sizes to vary according
+   to the screen size.
+*/
+@media screen and (min-width: 1200px) {
+    /* Initial text size for the custom content in the header */
+    div#header-custom-2,
+    /*div#header-custom-3,*/
+    div#footer-image {
+        background-image: url(img/995x40-blue.png);
+    }
+
+    div#custom-footer,
+    div#custom-footer-2,
+    div#custom-footer-3,
+    div#custom-footer-4,
+    div#custom-footer-5 {
+        background-image: url(img/965x40-blue.png);
+    }
+
+    div#customer-info-header,
+    div#customer-info-footer,
+    div#billing-info-header,
+    div#billing-info-footer,
+    div#shipping-info-header,
+    div#shipping-info-footer,
+    div#order-summary-header,
+    div#order-summary-footer,
+    div#recommended-for-you-header,
+    div#recommended-for-you-footer,
+    div#pay-now-header,
+    div#pay-now-footer,
+    div#security-logos-header,
+    div#security-logos-footer {
+        background-image: url(img/450x40-blue.png);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    div#header-custom-2,
+    div#header-custom-3,
+    div#footer-image {
+        background-image: url(img/940x40-green.png);
+    }
+
+    div#custom-footer,
+    div#custom-footer-2,
+    div#custom-footer-3,
+    div#custom-footer-4,
+    div#custom-footer-5 {
+        background-image: url(img/910x40-green.png);
+    }
+
+    div#customer-info-header,
+    div#customer-info-footer,
+    div#billing-info-header,
+    div#billing-info-footer,
+    div#shipping-info-header,
+    div#shipping-info-footer,
+    div#order-summary-header,
+    div#order-summary-footer,
+    div#recommended-for-you-header,
+    div#recommended-for-you-footer,
+    div#pay-now-header,
+    div#pay-now-footer,
+    div#security-logos-header,
+    div#security-logos-footer {
+        background-image: url(img/425x40-green.png);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    div#header-custom-2,
+    div#header-custom-3,
+    div#footer-image {
+        background-image: url(img/720x40-orange.png);
+    }
+
+    div#custom-footer,
+    div#custom-footer-2,
+    div#custom-footer-3,
+    div#custom-footer-4,
+    div#custom-footer-5 {
+        background-image: url(img/690x40-orange.png);
+    }
+
+    div#customer-info-header,
+    div#customer-info-footer,
+    div#billing-info-header,
+    div#billing-info-footer,
+    div#shipping-info-header,
+    div#shipping-info-footer,
+    div#order-summary-header,
+    div#order-summary-footer,
+    div#recommended-for-you-header,
+    div#recommended-for-you-footer,
+    div#pay-now-header,
+    div#pay-now-footer,
+    div#security-logos-header,
+    div#security-logos-footer {
+        background-image: url(img/315x40-orange.png);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    div#header-custom-2,
+    div#header-custom-3,
+    div#footer-image {
+        background-image: url(img/740x40-gray.png);
+    }
+
+    div#custom-footer,
+    div#custom-footer-2,
+    div#custom-footer-3,
+    div#custom-footer-4,
+    div#custom-footer-5 {
+        background-image: url(img/705x40-gray.png);
+    }
+
+    div#customer-info-header,
+    div#customer-info-footer,
+    div#billing-info-header,
+    div#billing-info-footer,
+    div#shipping-info-header,
+    div#shipping-info-footer,
+    div#order-summary-header,
+    div#order-summary-footer,
+    div#recommended-for-you-header,
+    div#recommended-for-you-footer,
+    div#pay-now-header,
+    div#pay-now-footer,
+    div#security-logos-header,
+    div#security-logos-footer {
+        background-image: url(img/675x40-gray.png);
+    }
+}
+
+.digital-only {
+    margin-left: 0 !important;
+}
+input[type="checkbox"]:before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 .25em 0 0;
+
+    font: 16px/1em sans-serif;
+
+    content: "";
+    vertical-align: top;
+}
+input[type="checkbox"]:checked :before {
+    content: "";
+    text-align: center;
+
+    color: #333;
+    background: blue;
+}
+input[type="checkbox"]:checked :after {
+    font-weight: bold;
+}
+
+/* gdpr */
+#gdpr-wrapper {
+    background-color: #F7F7F7;
+}
+
+
+div#header-custom-2{background-repeat:no-repeat;background-position:center;background-size:cover;background-image:url('img/header-clickbank250.png');min-height:250px}h3[id^='cartTitle']{background-image:url(img/3bottle450.png);background-position:center 45%;background-size:85%;background-repeat:no-repeat;height:460px;border-bottom:1px solid #eee}@media screen and (max-width:1199px){div#header-custom-2{min-height:236px}}@media screen and (max-width:991px){div#header-custom-2{background-image:url('img/header-clickbank720.png');background-size:contain;background-position:bottom;min-height:250px}h3[id^='cartTitle']{height:330px}}@media screen and (max-width:767px){h3[id^='cartTitle']{background-size:300px;min-height:330px}}@media screen and (max-width:620px){div#header-custom-2{min-height:205px}}@media screen and (max-width:580px){div#header-custom-2{min-height:190px}}@media screen and (max-width:520px){div#header-custom-2{background-image:url('img/header-clickbank480.png');background-size:contain;min-height:350px}}@media screen and (max-width:460px){div#header-custom-2{min-height:305px}}@media screen and (max-width:430px){div#header-custom-2{min-height:280px}}@media screen and (max-width:375px){div#header-custom-2{min-height:245px}}h3[id^='cartTitle']{background-image:url(img/3bottle450.png);background-position:center 45%;background-size:85%;background-repeat:no-repeat;height:460px;border-bottom:1px solid #eee}@media screen and (max-width:1199px){div#header-custom-2{min-height:236px}}@media screen and (max-width:991px){div#header-custom-2{background-image:url('img/header-clickbank720.png');background-size:contain;background-position:bottom;min-height:250px}h3[id^='cartTitle']{height:330px}}@media screen and (max-width:767px){h3[id^='cartTitle']{background-size:300px;min-height:330px}}@media screen and (max-width:620px){div#header-custom-2{min-height:205px}}@media screen and (max-width:580px){div#header-custom-2{min-height:190px}}@media screen and (max-width:520px){div#header-custom-2{background-image:url('img/header-clickbank480.png');background-size:contain;min-height:350px}}@media screen and (max-width:460px){div#header-custom-2{min-height:305px}}@media screen and (max-width:430px){div#header-custom-2{min-height:280px}}@media screen and (max-width:375px){div#header-custom-2{min-height:245px}}
+div.digital-only{display:none}img#productImage{display:none!important}#orderSummary ul li .product-price::before{content:'Your Price';display:block;float:left}#orderSummary ul li .product-price{width:100%;text-align:right}h3[id^='cartTitle']::before{display:block;height:20px;content:'Normal Price';position:absolute;bottom:55px;margin:0;padding:0;color:red}h3[id^='cartTitle']::after{display:block;content:"$297.00";background-repeat:no-repeat;background-position:center;background-size:cover;color:red;position:absolute;bottom:52px;right:0;margin:0;padding:0;text-decoration:line-through}div#header-custom-2{background-repeat:no-repeat;background-position:center;background-size:cover;background-image:url('img/header-clickbank250.png');min-height:250px}h3[id^='cartTitle']{background-image:url(img/3bottle450.png);background-position:center 45%;background-size:85%;background-repeat:no-repeat;height:460px;border-bottom:1px solid #eee}@media screen and (max-width:1199px){div#header-custom-2{min-height:236px}}@media screen and (max-width:991px){div#header-custom-2{background-image:url('img/header-clickbank720.png');background-size:contain;background-position:bottom;min-height:250px}h3[id^='cartTitle']{height:330px}}@media screen and (max-width:767px){h3[id^='cartTitle']{background-size:300px;min-height:330px}}@media screen and (max-width:620px){div#header-custom-2{min-height:205px}}@media screen and (max-width:580px){div#header-custom-2{min-height:190px}}@media screen and (max-width:520px){div#header-custom-2{background-image:url('img/header-clickbank480.png');background-size:contain;min-height:350px}}@media screen and (max-width:460px){div#header-custom-2{min-height:305px}}@media screen and (max-width:430px){div#header-custom-2{min-height:280px}}@media screen and (max-width:375px){div#header-custom-2{min-height:245px}}

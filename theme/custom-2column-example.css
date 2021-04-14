@@ -1,0 +1,311 @@
+/*
+if using #footer-image div, this gets rid of the 20px gap between the form and the footer image
+*/
+form {
+    margin: 0;
+}
+
+/*
+to change overall body color
+*/
+body {
+    color: #333;
+    background-color: darkgray;
+}
+
+/*
+   Creating block elements for Header, Order Bumps & Pay Button
+*/
+#main::before,
+#main::after,
+#payButton::before {
+    display: block;
+
+    content: "";
+}
+/*
+   Centers the entire order form
+*/
+#main {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+#norton-logo > img {
+    margin-top: 10px !important;
+}
+
+
+/*
+    HEADER IMAGE:
+    Default image should be for mobile, and then add larger sizes in the media queries. You should experiment to get the
+    best results you need i.e., landscape/portrait for each screen size. Images do not need to be 250px, but the CSS below should reflect the true height of the Advanced image in WAM.
+*/
+
+
+@media screen and (min-width:320px) and (max-width: 767px) {
+    #main::before {
+        height: 250px;
+
+        background-image: url(img/header-600x250.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width:768px) {
+    #main::before {
+        height: 250px;
+
+        background-image: url(img/header-760x250.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width:992px) {
+    #main::before {
+        height: 250px;
+
+        background-image: url(img/header-990x250.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) {
+    #main::before {
+        height: 250px;
+
+        background-image: url(img/header-1199x250.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* Credit Card CVV Modal background color*/
+.modal-content {
+    background-color: white;
+}
+
+/*
+    Order Bump is the container for individual 'bump-box's.
+*/
+#orderBump::before {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.bump-box::before {
+    display: block;
+    padding-left: 20px;
+
+    font-size: 18px;
+}
+
+.bump-box input {
+    position: absolute;
+    left: 10px;
+}
+
+.bump-box div {
+    margin-left: 5px;
+}
+
+.icon-download {
+    margin-left: 18px;
+}
+
+/*
+    For adding logo or small image above the 'Pay Now' button
+*/
+
+/* #payButton::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(img/custom-logo.png);
+    height: 50px;
+    margin-bottom: 20px;
+}*/
+
+/*
+    There is a div in the template called '#footer-image'.  Here we are setting a background image to it. It is necessary to do this, otherwise the copyright will be between
+    the form and the footer image and it looks better being last (after the footer image)
+    */
+#footer-image {
+    height: 250px;
+
+    background-image: url(img/footer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* 
+    For small devices, we default to a single column
+*/
+@media screen and (max-width: 768px) {
+    #leftColumn {
+        width: 100%;
+    }
+
+    #rightColumn {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 5px 15px 5px 15px;
+        clear: both;
+    }
+}
+
+/*
+    For large devices, we default to a two column layout
+*/
+@media screen and (min-width: 768px) {
+    /* Setting the background to simulate the 2 column background. We need to set the full container background (by choosing the color
+    we would like to display on the right column -smaller height column. Then we simply set the background color of the left column -bigger 
+    height column- to give it a different color, hence achieving a two colored layout.
+    */
+    #orderFormContent {
+        float: left;
+        clear: both;
+
+        background-color: #ffffe3;
+    }
+
+    #leftColumn {
+        float: left;
+        width: 50%;
+        padding-bottom: 10px;
+        margin-top: 0;
+
+        background-color: #f0f0f0;
+    }
+
+    #rightColumn {
+        display: block;
+        float: right;
+        width: 50%;
+        padding: 5px 15px 5px 15px;
+    }
+
+    #orderSummary,
+    #customerInfo,
+    #orderBump,
+    #paymentInfo,
+    #payButton {
+        float: left;
+        width: 100%;
+    }
+}
+
+/*
+    Common custom styles
+*/
+
+/* Order Bump Box Styling */
+.bump-box {
+    border: 3px dashed black;
+    background-color: #fcf8e3 !important;
+}
+
+/* Adding image after the Bumps Title */
+#orderBumpTitle::after {
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+
+    content: "";
+
+    background-image: url(img/side-image-440x250.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Pay Button Disabled Styling */
+#payButton button[disabled] {
+    border-color: #555;
+    background: #62d65e;
+}
+
+/* 
+    Custom Content Images
+*/
+
+/* 
+    The custom section container can display up to 4 images, and we can have them independently in this common section, or define specific images for
+    each media query. Also we have 4 ids:
+    
+    customContainerOne, customContainerTwo, customContainerThree, customContainerFour
+
+    We need to hide them or add an image to any of these as desired.
+*/
+#customContainerOne {
+    height: 250px;
+    margin-bottom: 10px;
+
+    background-image: url(img/side-image-440x250.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#customContainerTwo {
+    height: 250px;
+    margin-bottom: 10px;
+
+    background-image: url(img/side-image-440x250.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#customContainerThree {
+    height: 250px;
+    margin-bottom: 10px;
+
+    background-image: url(img/side-image-440x250.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#customContainerFour {
+    height: 250px;
+
+    background-image: url(img/side-image-440x250.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* For changing the color of the copyright */
+.copyright {
+    color: #fff;
+}
+
+/* gdpr */
+#gdpr-wrapper {
+    border: 3px dashed black;
+    background-color: #FCF7DF;
+}
+
+
+
+
